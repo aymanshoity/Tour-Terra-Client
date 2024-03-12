@@ -24,7 +24,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <h1 className="logo text-6xl text-white">t<span className="text-xl text-white">our</span>t<span className="text-xl text-white">erra</span></h1>
+                    <h1 className="ding text-8xl font-extrabold text-white">t<span className="text-3xl text-white">our</span>t<span className="text-3xl text-white">erra</span></h1>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
