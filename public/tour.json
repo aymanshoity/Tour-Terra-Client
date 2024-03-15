@@ -1,0 +1,77 @@
+[
+  {
+    "tourCard": "https://i.ibb.co/QdgqqZM/amiakhum3-1.jpg",
+    "tourImage1": "https://i.ibb.co/8zXTZ6v/thanchi.jpg",
+    "tourImage2": "https://i.ibb.co/r7SS3Mh/amiakhum.jpg",
+    "tourImage3": "https://i.ibb.co/z6FqfkV/remacri.jpg",
+    "tourImage4": "https://i.ibb.co/mzqXzxV/nafa.jpg",
+    "tourImage5": "https://i.ibb.co/n8MgQXv/nafa2.jpg",
+    "tourType": "Tracking",
+    "tourTitle": "Bandarbans Package",
+    "tourPlaces": "Thanchi, Sangu River,Rajapathor,Remacrifalls,Amiakhum,Nafakhum,Shatvaikhum",
+    "price": 8590,
+    "totalDays": 3,
+    "tourDescription": "Bandarban, where adventure awaits at every turn! Explore the rugged landscapes and lush green hills of this enchanting destination, where nature's grandeur unfolds in breathtaking vistas. Trek through verdant forests, discovering hidden waterfalls and serene lakes along the way. Immerse yourself in the rich culture of indigenous communities, learning age-old traditions and sampling delicious local cuisine. Embark on thrilling river cruises, where the mighty Sangu River winds its way through picturesque valleys. As the sun sets over the horizon, marvel at the beauty of Bandarban, a land of endless wonders waiting to be discovered. Join us on an unforgettable journey into the heart of this majestic paradise.",
+    "tourPlan": {
+      "day1": "Thanchi, Sangu River,Rajapathor",
+      "day2": "Remacrifalls,Amiakhum",
+      "day3": "Nafakhum,Shatvaikhum"
+    }
+  },
+  {
+    "tourCard": "https://i.ibb.co/ZNBfRB0/hironpoint-1.jpg",
+    "tourImage1": "https://i.ibb.co/bW6typS/tigerpoint.jpg",
+    "tourImage2": "https://i.ibb.co/FhPRh7r/tigertila.jpg",
+    "tourImage3": "https://i.ibb.co/1n0zwKy/shundarbans.jpg",
+    "tourImage4": "https://i.ibb.co/wLPw9vL/harbaria.jpg",
+    "tourImage5": "https://i.ibb.co/fvQ0spp/hironpoint.jpg",
+    "tourType": "Wild",
+    "tourTitle": "Shundarbans Package",
+    "tourPlaces": "Tiger Point,Tiger Tila, Harbaria,Dublar Chor,Hiron Point,Cannel Crossing,Koromjol,Jamtola Sea Beach,Kotka Watch Tower ",
+    "price": 7000,
+    "totalDays": 3,
+    "tourDescription": "Welcome to the Sundarbans Package, a captivating wilderness waiting to be explored! Lose yourself in the tangled mangrove forests, where every corner holds the promise of a thrilling discovery. Set sail on exhilarating boat safaris, keeping watch for the majestic Bengal tiger and myriad bird species. Immerse yourself in local culture, savoring the tastes and traditions of this vibrant land. End your day with a mesmerizing sunset cruise, basking in the golden glow of dusk. Join us in preserving this natural wonder for future generations, as together, we embark on an unforgettable journey into the heart of the Sundarbans.",
+    "tourPlan": {
+      "day1": "Tiger Point,Tiger Tila, Harbaria",
+      "day2": "Dublar Chor,Hiron Point,Cannel Crossing",
+      "day3": "Jamtola Sea Beach,Kotka Watch Tower"
+    }
+  },
+  {
+    "tourCard": "https://i.ibb.co/fQcdc5J/sajek1-1.jpg",
+    "tourImage1": "https://i.ibb.co/98NxTS9/sajek1.jpg",
+    "tourImage2": "https://i.ibb.co/ZztgywN/sajek3.jpg",
+    "tourImage3": "https://i.ibb.co/NC85cgP/alutila.jpg",
+    "tourImage4": "https://i.ibb.co/9wSztvN/konglakpara.jpg",
+    "tourImage5": "https://i.ibb.co/Pr7vcN2/ruiluipara.jpg",
+    "tourType": "Tracking",
+    "tourTitle": "Sajek Package",
+    "tourPlaces": "Ruilui Para,Longlak Para,Rock Garden,Hanging Bridge,Alutila Cave,District Park ",
+    "price": 8000,
+    "totalDays": 3,
+    "tourDescription": "Escape to the serene haven of Sajek Valley, nestled amidst the Chittagong Hill Tracts. Trek through verdant hills, soaking in panoramic vistas of misty mountains and lush valleys. Relax by crystal-clear streams and cascading waterfalls, immersing yourself in nature's tranquility. Thrill-seekers can enjoy zip-lining and paragliding adventures amidst breathtaking scenery. As the sun sets, be enchanted by the valley's golden glow, a perfect backdrop for cherished memories. Sajek Valley beckons with its serene beauty, offering an idyllic retreat for those seeking solace amidst nature's embrace.",
+    "tourPlan": {
+      "day1": "Ruilui Para,Longlak Para",
+      "day2": "Rock Garden,Hanging Bridge",
+      "day3": "Alutila Cave,District Park"
+    }
+  },
+  {
+    "tourCard": "https://i.ibb.co/p32xHG6/shenaishori2-1.jpg",
+    "tourImage1": "https://i.ibb.co/ZBJ2z1C/mohamaya2.jpg",
+    "tourImage2": "https://i.ibb.co/1J7kfTb/mohamaya.jpg",
+    "tourImage3": "https://i.ibb.co/vwTpm9w/shenaichori1.jpg",
+    "tourImage4": "https://i.ibb.co/TLXfZ9V/shenaishori2.jpg",
+    "tourImage5": "https://i.ibb.co/YyXRVLv/shenaichori4.jpg",
+    "tourType": "Boating",
+    "tourTitle": "Shonaichori and Mohamaya Package",
+    "tourPlaces": "Shonaichori and Mohamaya Lake",
+    "price": 1600,
+    "totalDays": 2,
+    "tourDescription": "Shonai Chori, a tranquil haven ensconced within lush forests, mesmerizes with its serene waterfalls and secluded charm. Lose yourself in the soothing sounds of cascading waters, surrounded by pristine beauty. Nearby, Mohamaya Lake offers tranquility in its mirrored waters, reflecting the surrounding hills in breathtaking splendor. Embark on a leisurely boat ride, indulging in moments of quiet reflection amidst nature's embrace. Whether seeking serenity or adventure, Shonai Chori and Mohamaya Lake promise an enchanting escape into tranquility, where every moment is a celebration of natural wonder and inner peace.",
+    "tourPlan": {
+      "day1": "Shonaichori",
+      "day2": "Mohamaya Lake"
+    }
+  }
+]

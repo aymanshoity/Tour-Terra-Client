@@ -6,7 +6,7 @@ import { Zoom } from "react-reveal";
 import { motion } from "framer-motion";
 const TourType = () => {
     return (
-        <div className="my-24 hero h-[500px] bg-fixed" style={{ backgroundImage: 'url(https://i.ibb.co/2hFTKdn/carousel-1.jpg)' }}>
+        <div className="my-24 hero h-[700px] bg-fixed" style={{ backgroundImage: 'url(https://i.ibb.co/2hFTKdn/carousel-1.jpg)' }}>
             <div className="hero-overlay bg-opacity-50"></div>
             <div className="hero-content text-center text-white flex flex-col">
                 <p className="logo text-3xl">Get your desired trip by</p>
@@ -19,7 +19,7 @@ const TourType = () => {
                             whileHover={{ scale: [null, 1.1, 1.2] }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="avatar">
+                            <div className="avatar hover:bg-[#90dddcff]">
                                 <div className="w-24 rounded border border-spacing-2 border-white ">
                                     <div className="flex flex-col items-center justify-center">
                                         <FaHiking className="text-7xl" />
@@ -35,7 +35,7 @@ const TourType = () => {
                             className="box"
                             whileHover={{ scale: [null, 1.1, 1.2] }}
                             transition={{ duration: 0.3 }}>
-                            <div className="avatar">
+                            <div className="avatar hover:bg-[#90dddcff]">
                                 <div className="w-24 rounded border border-spacing-2 border-white ">
                                     <div className="flex flex-col items-center justify-center">
                                         <GiHangGlider className="text-7xl" />
@@ -51,7 +51,7 @@ const TourType = () => {
                             className="box"
                             whileHover={{ scale: [null, 1.1, 1.2] }}
                             transition={{ duration: 0.3 }}>
-                            <div className="avatar">
+                            <div className="avatar hover:bg-[#90dddcff]">
                                 <div className="w-24 rounded border border-spacing-2 border-white ">
                                     <div className="flex flex-col items-center justify-center">
                                         <GiPolarBear className="text-7xl" />
@@ -67,7 +67,7 @@ const TourType = () => {
                             whileHover={{ scale: [null, 1.1, 1.2] }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="avatar">
+                            <div className="avatar hover:bg-[#90dddcff]">
                                 <div className="w-24 rounded border border-spacing-2 border-white ">
                                     <div className="flex flex-col items-center justify-center">
                                         <IoIosBoat className="text-7xl" />

@@ -1,8 +1,30 @@
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const [scrolled,setScrolled]=useState(false)
+    useEffect(()=>{
+        const handleScrolled=()=>{
+            const isScrolled=window.scrollY>0;
+            setScrolled(isScrolled)
+        }
+        window.addEventListener('scroll',handleScrolled)
 
+        return ()=>{
+            window.removeEventListener('scroll',handleScrolled)
+        }
+    },[])
+    const handleLogout = () => {
+        logOut()
+            .then(
+                Swal.fire(`${user?.displayName} logged out`)
+            )
+            .catch()
+    }
     const links = <>
         <NavLink to='/' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Home</NavLink>
         <NavLink to='/community' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Community</NavLink>
@@ -13,7 +35,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-opacity80 p-4 fixed z-10">
+        <div className={`navbar bg-opacity80 p-4 fixed z-10 ${scrolled? 'bg-black': ''}`}>
             <div className="navbar-start ">
                 <div className="dropdown ">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,7 +46,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <h1 className="ding text-8xl font-extrabold text-white">t<span className="text-3xl text-white">our</span>t<span className="text-3xl text-white">erra</span></h1>
+                    <h1 className="ding text-6xl md:text-8xl font-extrabold text-white">t<span className="text-3xl text-white">our</span>t<span className="text-3xl text-white">erra</span></h1>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -33,19 +55,25 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end ">
-                <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                {user &&
+
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img alt="Tailwind CSS Navbar component" src={user?.photoURL
+}/>
+                            </div>
                         </div>
+                        <ul tabIndex={0} className="menu menu-sm p-2 bg-black text-lg dropdown-content mt-3 z-[1] p-2 shadow text-white rounded-box w-52">
+                            <li><a >{user?.displayName}</a></li>
+                            <li><a>{user?.email}</a></li>
+                            <li><a>Dashboard</a></li>
+                            <li ><a onClick={handleLogout}>Logout</a></li>
+                            <li><a>Offer Announcements</a></li>
+                        </ul>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li>name</li>
-                        <li>email</li>
-                        <li>Dashboard</li>
-                        <li>Offer Announcements</li>
-                    </ul>
-                </div>
+                }
+
 
             </div>
         </div>
