@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+import UseAxiosPublic from '../../Hooks/UseAxiosPublic';
+import Swal from 'sweetalert2';
 
 const AllPackageDetails = ({ pack }) => {
+    const {user}=useContext(AuthContext)
+    const axiosPublic=UseAxiosPublic()
     const overlay2 = {
         position: 'absolute',
         top: 0,
@@ -10,6 +15,40 @@ const AllPackageDetails = ({ pack }) => {
         bottom: 0,
         background: 'rgba(0, 0, 0, 0.4)', // 60% opacity
     };
+
+    const handleAddToWhistle=(pack)=>{
+        console.log(pack)
+        const whistle={
+            email:user?.email,
+            tourId:pack?._id,
+            tourTitle:pack?.tourTitle,
+            tourCard:pack?.tourCard,
+            tourType:pack?.tourType,
+            totalDays:pack?.totalDays,
+            price:pack?.price,
+
+        }
+        console.log(whistle)
+        axiosPublic.post('/whistle',whistle)
+        .then(res=>{
+            console.log(res.data)
+            if(res.data.insertedId){
+                Swal.fire({
+                    title: `${pack.tourTitle} is added to Whistle!`,
+                    text: "Check your whistle!",
+                    icon: "success"
+                  });
+            }
+            else{
+                Swal.fire({
+                    icon: "error",
+                    title: `Oops!`,
+                    text: `${pack.tourTitle} is already added to Whistle!`,
+                    
+                  });
+            }
+        })
+    }
     return (
         <div className=" flex  flex-col md:flex-row  my-20">
             <div className="relative max-w-[350px] group">
@@ -48,7 +87,7 @@ const AllPackageDetails = ({ pack }) => {
                             Details
                         </button>
                     </Link>
-                    <button className="btn text-white bg-black hover:bg-[#90dddcff]">
+                    <button onClick={()=>handleAddToWhistle(pack)} className="btn text-white bg-black hover:bg-[#90dddcff]">
                         Add to Whistle
                     </button>
 

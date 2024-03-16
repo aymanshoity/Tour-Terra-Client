@@ -1,0 +1,39 @@
+[
+    {
+      "tourGuideName": "John Doe",
+      "tourGuideEmail": "john.doe@gmail.com",
+      "profilePicture": "https://i.ibb.co/jgrzGrg/t2.png",
+      "contactNum": "+1234567890",
+      "education": "Bachelor's Degree in Tourism Management",
+      "skill": ["Multilingual (English, Spanish, French)", "Outdoor Survival Skills", "Customer Service Excellence"],
+      "experience": "5 years of guiding experience in various locations around the world"
+    },
+    {
+      "tourGuideName": "Jane Smith",
+      "tourGuideEmail": "jane.smith@gmail.com",
+      "profilePicture": "https://i.ibb.co/9Gt0CdP/t4.png",
+      "contactNum": "+1987654321",
+      "education": "Master's Degree in Cultural Anthropology",
+      "skill": ["Historical Knowledge", "Wildlife Conservation", "Emergency First Aid"],
+      "experience": "8 years of guiding experience specializing in eco-tourism"
+    },
+    {
+      "tourGuideName": "Michael Johnson",
+      "tourGuideEmail": "michael.johnson@gmail.com",
+      "profilePicture": "https://i.ibb.co/x7x8qQr/t5.jpg",
+      "contactNum": "+1122334455",
+      "education": "Diploma in Adventure Tourism",
+      "skill": ["Rock Climbing", "White Water Rafting", "Navigation"],
+      "experience": "3 years of guiding experience focusing on adventure tours"
+    },
+    {
+      "tourGuideName": "Emily Purification",
+      "tourGuideEmail": "emily123@gmail.com",
+      "profilePicture": "https://i.ibb.co/vw0v2Kv/t3.png",
+      "contactNum": "+1422534655",
+      "education": "Bachelor's Degree in Geography ",
+      "skill": ["Rock Climbing", "White Water Rafting", "Navigation"],
+      "experience": "4 years of guiding experience focusing on adventure tours"
+    }
+  ]
+  

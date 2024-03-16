@@ -37,7 +37,7 @@ const SinglePackage = () => {
         const guideName = form.guideName.value
         const tourName = packagesDetails?.tourTitle
         const tourId = packagesDetails?._id
-        const status='Pending'
+        const status='In Review'
         const bookPackage = { name, email, image, price, tourDate, guideName, tourName, tourId ,status}
         console.log(bookPackage)
         Swal.fire({
@@ -102,11 +102,11 @@ const SinglePackage = () => {
             <div className="hero min-h-screen w-full " style={{ backgroundImage: `url(${packagesDetails.tourImage1})` }}>
                 
 
-                <div className="hero-content bg-black bg-opacity-30 text-black font-bold border border-white rounded-lg  max-w-7xl">
+                <div className="my-8 hero-content bg-black bg-opacity-30 text-black font-bold border border-white rounded-lg  max-w-7xl">
 
                     <div className=" flex flex-col items-center justify-center">
                         <h1 className="text-5xl py-5 text-white">Book Online</h1>
-                        <form onSubmit={handleBookTour} className="py-5">
+                        <form onSubmit={handleBookTour} className="py-5 ">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                 <div className="form-control">
                                     <label className="label">

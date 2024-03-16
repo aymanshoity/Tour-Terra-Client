@@ -59,12 +59,12 @@ const Login = () => {
         <div className="flex lg:flex-row-reverse flex-col-reverse items-center justify-between ">
 
 
-            <div className="flex-1 lg:w-1/2 lg:h-screen">
+            <div className="flex-1 lg:w-1/2 lg:h-screen  lg:my-0 my-5">
                 <SharedHeading heading1={'Glad to get to back in '} heading2={'Tour Terra'}></SharedHeading>
-                <div className=" mx-auto md:w-[500px] w-[280px]  shadow-lg shadow-cyan-500/50 bg-white">
+                <div className=" mx-auto lg:w-full md:w-[500px] w-[280px]  shadow-lg shadow-cyan-500/50 bg-white">
                     <form onSubmit={handleLogin} className="px-12 py-5">
                         <h1 className="backdrop-blur-sm text-4xl pb-8">Login</h1>
-                        <div className="space-y-5">
+                        <div className="space-y-4">
 
                             <label htmlFor="email" className="block">Email</label>
                             <div className="relative">
@@ -79,10 +79,11 @@ const Login = () => {
 
 
                             </div>
-                            <label htmlFor="email" className="block">New to this Website? Go to <Link to='/register'><span className="text-red-600">Register Page</span></Link></label>
+                            
                         </div>
+                        <label htmlFor="email" className="block mt-6">New to this Website? Go to <Link to='/register'><span className="text-red-600">Register Page</span></Link></label>
                         {/* button type will be submit for handling form submission*/}
-                        <button type="submit" className="my-5 btn bg-black text-white hover:bg-[#90dddcff]">Login</button>
+                        <button type="submit" className="my-5 w-full btn bg-black text-white hover:bg-[#90dddcff]">Login</button>
                     </form>
                     <div className="divider">Or Sign In with</div>
                     <div className="py-4 flex flex-col items-center">
@@ -90,15 +91,15 @@ const Login = () => {
                     </div>
 
                 </div>
-                <div className="py-4 flex flex-col items-center">
+                {/* <div className="py-4 flex flex-col items-center">
                     <Link to='/'><button className="my-5 btn bg-black text-white hover:bg-[#90dddcff]">Return Home</button></Link>
-                </div>
+                </div> */}
             </div>
 
 
 
             <div className=" overflow-hidden flex-1 lg:w-1/2 md:w-full">
-                <img src="https://i.ibb.co/KyTTLn6/428708627-917827286799138-3663888881924793776-n.jpg" className="  lg:min-h-screen w-full  h-[600px]  bg-gray-400  object-cover transform transition-transform ease-in-out duration-300 hover:scale-110" alt="hero navigate ui" />
+                <img src="https://i.ibb.co/KyTTLn6/428708627-917827286799138-3663888881924793776-n.jpg" className="  lg:h-screen w-full  h-[500px]  bg-gray-400  object-cover transform transition-transform ease-in-out duration-300 hover:scale-110" alt="hero navigate ui" />
             </div>
         </div>
     );
