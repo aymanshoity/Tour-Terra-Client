@@ -5,14 +5,15 @@ import SharedHeading from "../SharedComponents/SharedHeading";
 import MeetTourGuides from "../Home/HomepageSections/TravelGuideSection/MeetTourGuides";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const SinglePackage = () => {
     const {user}=useContext(AuthContext)
     const { id } = useParams()
-    const axiosSecure = UseAxiosSecure()
+    const tourGuideName=[]
+    const [name,setName]=useState([])
     const axiosPublic = UseAxiosPublic()
     const { data: packagesDetails = [] } = useQuery({
         queryKey: ['packagesDetails'],
@@ -23,6 +24,22 @@ const SinglePackage = () => {
         }
 
     })
+    const { data: tourGuides = [] } = useQuery({
+        queryKey: ['tourGuides'],
+        queryFn: async () => {
+            const res = await axiosPublic.get('/tourGuides')
+            console.log(res.data)
+            return res.data
+        }
+    })
+
+    useEffect(()=>{
+        const extractedNames=tourGuides.map(guide=>guide?.tourGuideName)
+        setName(extractedNames)
+    },[tourGuides])
+
+    
+    
     
 
     const handleBookTour = (e) => {
@@ -143,11 +160,10 @@ const SinglePackage = () => {
                                         <span className="text-white">Choose Tourist Guide</span>
                                     </label>
                                     <select name="guideName" className="input input-bordered ">
-
-                                        <option value="Thriller">Thriller</option>
-                                        <option value="Literature & Fiction">Literature & Fiction</option>
-                                        <option value="Science &Technology">Science &Technology</option>
-                                        <option value="History">History</option>
+                                        {
+                                            name?.map((name,index)=>
+                                            ( <option key={index} value={name}>{name}</option> ))
+                                        }
                                     </select>
                                 </div>
                             </div>

@@ -16,9 +16,9 @@ const AllPackageDetails = ({ pack }) => {
         background: 'rgba(0, 0, 0, 0.4)', // 60% opacity
     };
 
-    const handleAddToWhistle=(pack)=>{
+    const handleAddToWishlist=(pack)=>{
         console.log(pack)
-        const whistle={
+        const wishlist={
             email:user?.email,
             tourId:pack?._id,
             tourTitle:pack?.tourTitle,
@@ -28,8 +28,8 @@ const AllPackageDetails = ({ pack }) => {
             price:pack?.price,
 
         }
-        console.log(whistle)
-        axiosPublic.post('/whistle',whistle)
+        console.log(wishlist)
+        axiosPublic.post('/wishlist',wishlist)
         .then(res=>{
             console.log(res.data)
             if(res.data.insertedId){
@@ -87,8 +87,8 @@ const AllPackageDetails = ({ pack }) => {
                             Details
                         </button>
                     </Link>
-                    <button onClick={()=>handleAddToWhistle(pack)} className="btn text-white bg-black hover:bg-[#90dddcff]">
-                        Add to Whistle
+                    <button onClick={()=>handleAddToWishlist(pack)} className="btn text-white bg-black hover:bg-[#90dddcff]">
+                        Add to Wishlist
                     </button>
 
                 </div>

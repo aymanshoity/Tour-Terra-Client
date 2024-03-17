@@ -77,8 +77,8 @@ const Register = () => {
 
                 <div className=" mx-auto lg:w-full md:w-[500px] w-[280px]  shadow-lg shadow-cyan-500/50 bg-white lg:h-screen lg:my-0 my-5">
                     <SharedHeading heading1={'Welcome to'} heading2={'Tour Terra'}></SharedHeading>
-                    <form onSubmit={handleSubmit(onSubmit)} className="px-12 py-5">
-                        <h1 className="backdrop-blur-sm text-4xl pb-8">Register</h1>
+                    <form onSubmit={handleSubmit(onSubmit)} className="px-12 py-4">
+                        <h1 className="backdrop-blur-sm text-4xl pb-4">Register</h1>
                         <div className=" grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-6">
                             <div>
                                 <label htmlFor="email" className="block">Your Name</label>
@@ -128,26 +128,25 @@ const Register = () => {
                         </div>
                         <label htmlFor="email" className="block mt-6">Already have an Account? Go to <Link to='/login'><span className="text-red-600">Login Page</span></Link></label>
                         {/* button type will be submit for handling form submission*/}
-                        <button type="submit" className="my-5 btn w-full bg-black text-white hover:bg-[#90dddcff]">Register</button>
+                        <button type="submit" className="my-3 btn  bg-black text-white hover:bg-[#90dddcff]">Register</button>
+                        <Link to='/'><button className="my-3 btn bg-black text-white hover:bg-[#90dddcff]">Return Home</button></Link>
                     </form>
                     <div className="divider">Or Sign Up with</div>
-                    <div className="py-4 flex flex-col items-center">
+                    <div className="py-2 flex flex-col items-center">
                         <button onClick={handleGoogleRegister} className="my-5 btn bg-black text-white hover:bg-[#90dddcff]"><FaGoogle />Google</button>
                     </div>
 
                 </div>
-                {/* <div className="py-4 flex flex-col items-center">
-                    <Link to='/'><button className="my-5 btn bg-black text-white hover:bg-[#90dddcff]">Return Home</button></Link>
-                </div> */}
+
+
+
             </div>
 
 
 
             <div className="lg:w-1/2 overflow-hidden flex-1 ">
                 <img src="https://i.ibb.co/1rLwF68/bandarbans.jpg" className=" w-full  lg:h-screen   bg-gray-400  object-cover transform transition-transform ease-in-out duration-300 hover:scale-110" alt="hero navigate ui" />
-                {/* <div className="p-8 rounded-lg absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100">
-                    <h1 className="ding text-2xl text-white">Let yourself be enchanted by the beauty of  </h1>
-                </div> */}
+
             </div>
         </div>
 

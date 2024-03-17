@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -65,11 +65,11 @@ const Navbar = () => {
                             </div>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm p-2 bg-black text-lg dropdown-content mt-3 z-[1] p-2 shadow text-white rounded-box w-52">
-                            <li><a >{user?.displayName}</a></li>
-                            <li><a>{user?.email}</a></li>
-                            <li><a>Dashboard</a></li>
-                            <li ><a onClick={handleLogout}>Logout</a></li>
-                            <li><a>Offer Announcements</a></li>
+                            <li>{user?.displayName}</li>
+                            <li>{user?.email}</li>
+                            <Link to='/dashboard'><li>Dashboard</li></Link>
+                            <li onClick={handleLogout}>Logout</li>
+                            <li>Offer Announcements</li>
                         </ul>
                     </div>
                 }

@@ -54,7 +54,7 @@ const TourGuide = () => {
                     <h1 className="ding lg:text-4xl font-extrabold text-3xl text-[#2D9596] my-5">Add a Review:</h1>
                     <form>
                         <div className="flex flex-col items-start gap-6">
-                            <textarea className="textarea textarea-accent w-1/4" placeholder="Add your Review"></textarea>
+                            <textarea className="textarea textarea-accent lg:w-1/4" placeholder="Add your Review"></textarea>
                             <button type="submit" className="btn bg-black text-white hover:bg-[#2D9596]">Submit</button>
                         </div>
                     </form>

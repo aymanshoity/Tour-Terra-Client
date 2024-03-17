@@ -62,10 +62,9 @@ const Login = () => {
             <div className="flex-1 lg:w-1/2 lg:h-screen  lg:my-0 my-5">
                 <SharedHeading heading1={'Glad to get to back in '} heading2={'Tour Terra'}></SharedHeading>
                 <div className=" mx-auto lg:w-full md:w-[500px] w-[280px]  shadow-lg shadow-cyan-500/50 bg-white">
-                    <form onSubmit={handleLogin} className="px-12 py-5">
-                        <h1 className="backdrop-blur-sm text-4xl pb-8">Login</h1>
-                        <div className="space-y-4">
-
+                    <form onSubmit={handleLogin} className="px-12 py-2">
+                        <h1 className="backdrop-blur-sm text-4xl pb-4">Login</h1>
+                        <div className="space-y-2">
                             <label htmlFor="email" className="block">Email</label>
                             <div className="relative">
                                 <input name="email" type="email" placeholder="example@gmail.com" className="p-3 block w-full pl-10 shadow-lg shadow-cyan-500/50 outline-none" />
@@ -86,7 +85,7 @@ const Login = () => {
                         <button type="submit" className="my-5 w-full btn bg-black text-white hover:bg-[#90dddcff]">Login</button>
                     </form>
                     <div className="divider">Or Sign In with</div>
-                    <div className="py-4 flex flex-col items-center">
+                    <div className="py-2 flex flex-col items-center">
                         <button onClick={handleGoogleLogin} className="my-5 btn bg-black text-white hover:bg-[#90dddcff]"><FaGoogle />Google</button>
                     </div>
 
