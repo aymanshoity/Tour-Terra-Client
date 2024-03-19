@@ -51,6 +51,7 @@ const Banner = () => {
     };
     return (
         <Swiper
+            
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
@@ -72,7 +73,7 @@ const Banner = () => {
                     <div style={overlay2}></div>
                     <div style={overlay3}></div>
                     <div style={overlay4}></div>
-                    <div className="hero-content text-left rounded-lg text-white   mx-10 my-44">
+                    <div className="hero-content text-left rounded-lg text-white   px-10 py-44">
                         <div className='max-w-xl md:max-w-2xl'>
                             <h1 className="mb-5 text-3xl md:text-5xl font font-bold">Explore Bangladesh's beauty with Tour Terra</h1>
                             <p className="mb-5">Unlock Bangladesh's Secrets  with Tour Terra's Expertise.</p>
@@ -88,7 +89,7 @@ const Banner = () => {
                     <div style={overlay2}></div>
                     <div style={overlay3}></div>
                     <div style={overlay4}></div>
-                    <div className="hero-content text-left rounded-lg text-white   mx-10 my-44">
+                    <div className="hero-content text-left rounded-lg text-white   px-10 py-44">
                         <div className='max-w-xl md:max-w-2xl'>
                             <h1 className="mb-5 text-3xl md:text-5xl font font-bold">Explore Bangladesh's beauty with Tour Terra</h1>
                             <p className="mb-5">Unlock Bangladesh's Secrets  with Tour Terra's Expertise.</p>
@@ -104,7 +105,7 @@ const Banner = () => {
                     <div style={overlay2}></div>
                     <div style={overlay3}></div>
                     <div style={overlay4}></div>
-                    <div className="hero-content text-left rounded-lg text-white   mx-10 my-44">
+                    <div className="hero-content text-left rounded-lg text-white   px-10 py-44">
                         <div className='max-w-xl md:max-w-2xl'>
                             <h1 className="mb-5 text-3xl md:text-5xl font font-bold">Explore Bangladesh's beauty with Tour Terra</h1>
                             <p className="mb-5">Unlock Bangladesh's Secrets  with Tour Terra's Expertise.</p>

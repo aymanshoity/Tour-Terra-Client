@@ -9,11 +9,12 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
 const Register = () => {
     const navigate = useNavigate()
     const { logOut, createUser, googleLogin } = useContext(AuthContext)
     const { register, handleSubmit, reset, formState: { errors }, } = useForm()
-
+    const axiosPublic = UseAxiosPublic()
     const onSubmit = (data) => {
         console.log(data)
         createUser(data.email, data.password)
@@ -24,12 +25,29 @@ const Register = () => {
                     photoURL: data.photo
                 })
                     .then(() => {
-                        Swal.fire("User Created Successfully!");
-                        reset();
-                        logOut()
-                            .then()
-                            .catch(error => console.log(error))
-                        navigate('/')
+                        const touristInfo = {
+                            name: data.name,
+                            photo: data.photo,
+                            email: data.email,
+                            role: 'tourist'
+                        }
+                        axiosPublic.post('/tourists', touristInfo)
+                            .then(res => {
+                                console.log(res.data)
+                                if (res.data.insertedId) {
+                                    Swal.fire("User Created Successfully!");
+                                    reset();
+                                    logOut()
+                                        .then()
+                                        .catch(error => console.log(error))
+                                    navigate('/')
+
+                                } else {
+                                    Swal.fire("User Already Created !");
+                                    navigate('/login')
+                                }
+                            })
+
                     })
                     .catch(error => {
                         console.log(error)
@@ -51,11 +69,28 @@ const Register = () => {
         googleLogin()
             .then(result => {
                 console.log(result.user)
-                Swal.fire(`${result.user.displayName} Registered Successfully!`);
-                logOut()
-                    .then()
-                    .catch(error => console.log(error))
-                navigate('/')
+                const touristInfo = {
+                    name: result.user.displayName,
+                    photo: result.user.photoURL,
+                    email: result.user.email,
+                    role: 'tourist'
+                }
+                axiosPublic.post('/tourists', touristInfo)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.insertedId) {
+                            Swal.fire(`${result.user.displayName} Registered Successfully!`);
+                            logOut()
+                                .then()
+                                .catch(error => console.log(error))
+                            navigate('/')
+
+                        } else {
+                            Swal.fire("User Already Created !");
+                            navigate('/login')
+                        }
+                    })
+
             })
             .catch(error => {
                 console.log(error)

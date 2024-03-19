@@ -27,7 +27,7 @@ export const OurPackeges = () => {
                 </Link>
                 <div className='mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                     {
-                        packages?.map(pack => <SigngleLoad key={pack._id} pack={pack}></SigngleLoad>)
+                        packages?.slice(0,4).map(pack => <SigngleLoad key={pack._id} pack={pack}></SigngleLoad>)
                     }
                 </div>
             </div>

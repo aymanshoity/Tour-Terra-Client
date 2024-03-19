@@ -1,30 +1,62 @@
-import { Fade } from "react-reveal";
+
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
-import SharedHeading from "../../../Components/SharedComponents/SharedHeading"
+import UseAdmin from "../../../Hooks/UseAdmin";
+import UseTourGuide from "../../../Hooks/UseTourGuide";
 const Dashboard = () => {
+    const [isAdmin] = UseAdmin();
+    const [isTourGuide] = UseTourGuide()
     const { user, logOut } = useContext(AuthContext)
     const handleLogout = () => {
         logOut()
             .then()
             .catch()
     }
-    const overlay2 = {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: 'rgba(0, 0, 0, 0.4)', // 60% opacity
-    };
+
 
     const links = <>
+
         <NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Dashboard</NavLink>
-        <NavLink to='/dashboard/touristProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile</NavLink>
-        <NavLink to='/dashboard/myBookings' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Bookings</NavLink>
-        <NavLink to='/dashboard/myWishlist' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Whistle</NavLink>
+
+        {isAdmin &&
+            <>
+                {/* Admin Bar */}
+                <NavLink to='/dashboard/adminProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile (admin)</NavLink>
+                <NavLink to='/dashboard/addPackage' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Add Package</NavLink>
+                <NavLink to='/dashboard/manageUser' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Manage User</NavLink>
+            </>}
+
+        {!isAdmin && isTourGuide && <>
+
+            {/* Tour Guide Bar */}
+            <NavLink to='/dashboard/tourGuideProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile(TG)</NavLink>
+            <NavLink to='/dashboard/myAssignedTour' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Assigned Tours</NavLink>
+
+        </>}
+
+
+        {
+            !isAdmin && !isTourGuide && <>
+
+                {/* tourist bar */}
+                < NavLink to='/dashboard/touristProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile</NavLink>
+                <NavLink to='/dashboard/myBookings' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Bookings</NavLink>
+
+                <NavLink to='/dashboard/myWishlist' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Wishlist</NavLink>
+            </>
+        }
+
+        <div className="divider divider-error"></div>
+        <NavLink to='/allPackages' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>All Packages</NavLink>
+        <NavLink to='/' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Home</NavLink>
+
+
+
+
+
+
 
 
 
@@ -71,7 +103,7 @@ const Dashboard = () => {
             <div className="drawer-side " >
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
-                <ul className="menu p-4 w-80 min-h-full text-white" style={{backgroundImage: 'url(https://i.ibb.co/fvQ0spp/hironpoint.jpg)'}}>
+                <ul className="menu p-4 w-80 min-h-full text-white bg-opacity-4" style={{ backgroundImage: 'url(https://i.ibb.co/fvQ0spp/hironpoint.jpg)' }}>
                     <div className="flex flex-col items-center py-5">
                         <h1 className="ding text-6xl md:text-6xl font-extrabold text-white">t<span className="text-3xl text-white">our</span>t<span className="text-3xl text-white">erra</span></h1>
                     </div>

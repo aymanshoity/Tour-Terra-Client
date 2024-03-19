@@ -49,7 +49,7 @@ const TourGuide = () => {
 
                     </div>
                 </div>
-                <div className="divider text-black"></div>
+                {/* <div className="divider text-black"></div>
                 <div>
                     <h1 className="ding lg:text-4xl font-extrabold text-3xl text-[#2D9596] my-5">Add a Review:</h1>
                     <form>
@@ -58,7 +58,7 @@ const TourGuide = () => {
                             <button type="submit" className="btn bg-black text-white hover:bg-[#2D9596]">Submit</button>
                         </div>
                     </form>
-                </div>
+                </div> */}
 
 
             </div>

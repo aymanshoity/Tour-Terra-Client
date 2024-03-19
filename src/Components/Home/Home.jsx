@@ -15,7 +15,7 @@ const Home = () => {
             <OurPackeges></OurPackeges>
             <MeetTourGuides></MeetTourGuides>
             <TourType></TourType>
-            <TouristStory></TouristStory>
+            <TouristStory ></TouristStory>
             <Footer></Footer>
         </div>
     );
