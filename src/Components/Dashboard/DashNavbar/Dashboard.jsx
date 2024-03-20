@@ -18,21 +18,22 @@ const Dashboard = () => {
 
     const links = <>
 
-        <NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Dashboard</NavLink>
+        <NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>Dashboard</NavLink>
 
         {isAdmin &&
             <>
                 {/* Admin Bar */}
-                <NavLink to='/dashboard/adminProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile (admin)</NavLink>
-                <NavLink to='/dashboard/addPackage' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Add Package</NavLink>
-                <NavLink to='/dashboard/manageUser' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Manage User</NavLink>
+                <NavLink to='/dashboard/adminProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>My Profile (admin)</NavLink>
+                <NavLink to='/dashboard/addPackage' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>Add Package</NavLink>
+                <NavLink to='/dashboard/manageUser' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>Manage User</NavLink>
+                <NavLink to='/dashboard/addBlogs' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>Add Blogs</NavLink>
             </>}
 
         {!isAdmin && isTourGuide && <>
 
             {/* Tour Guide Bar */}
-            <NavLink to='/dashboard/tourGuideProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile(TG)</NavLink>
-            <NavLink to='/dashboard/myAssignedTour' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Assigned Tours</NavLink>
+            <NavLink to='/dashboard/tourGuideProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>My Profile(TG)</NavLink>
+            <NavLink to='/dashboard/myAssignedTour' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>My Assigned Tours</NavLink>
 
         </>}
 
@@ -41,16 +42,17 @@ const Dashboard = () => {
             !isAdmin && !isTourGuide && <>
 
                 {/* tourist bar */}
-                < NavLink to='/dashboard/touristProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Profile</NavLink>
-                <NavLink to='/dashboard/myBookings' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Bookings</NavLink>
+                < NavLink to='/dashboard/touristProfile' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>My Profile</NavLink>
+                <NavLink to='/dashboard/myBookings' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>My Bookings</NavLink>
 
-                <NavLink to='/dashboard/myWishlist' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>My Wishlist</NavLink>
+                <NavLink to='/dashboard/myWishlist' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>My Wishlist</NavLink>
+                <NavLink to='/dashboard/addReview' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>Add Review</NavLink>
             </>
         }
 
         <div className="divider divider-error"></div>
-        <NavLink to='/allPackages' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>All Packages</NavLink>
-        <NavLink to='/' className={({ isActive }) => (isActive ? 'btn bg-black text-lg text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-4 hover:text-black ' : 'text-lg btn bg-black text-white border-white mb-4 hover:bg-[white] hover:text-black')}>Home</NavLink>
+        <NavLink to='/allPackages' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>All Packages</NavLink>
+        <NavLink to='/' className={({ isActive }) => (isActive ? 'btn bg-black text-md text-[#90dddcff] border-[#90dddcff] hover:bg-[white] mb-2 hover:text-black ' : 'text-md btn bg-black text-white border-white mb-2 hover:bg-[white] hover:text-black')}>Home</NavLink>
 
 
 
@@ -70,7 +72,7 @@ const Dashboard = () => {
                     <div className="flex flex-row items-center justify-between">
                         <div className="flex flex-row items-center justify-start gap-6">
                             <label htmlFor="my-drawer-2" className="btn drawer-button bg-[#90dddcff] lg:hidden"><IoMdMenu /></label>
-                            <h1 className='text-left  font-bold text-2xl mb-4'>Hello <span className='text-[#32898B]'>{user?.displayName}!!!</span></h1>
+                            <h1 className='text-left  font-bold text-2xl mb-4'>Hello, <span className='text-[#32898B]'>{user?.displayName}!!!</span></h1>
                         </div>
                         <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -79,7 +81,7 @@ const Dashboard = () => {
                                     } />
                                 </div>
                             </div>
-                            <ul tabIndex={0} className="menu menu-sm p-2 bg-black text-lg dropdown-content mt-3 z-[1] p-2 shadow text-white rounded-box w-52">
+                            <ul tabIndex={0} className="menu menu-sms bg-black text-md dropdown-content mt-3 z-[1] p-2 shadow text-white rounded-box w-52">
                                 <li>{user?.displayName}</li>
                                 <li>{user?.email}</li>
                                 <Link to='/'><li>Home</li></Link>

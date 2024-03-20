@@ -32,7 +32,7 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unSubscribe=onAuthStateChanged(auth,currentUser=>{
-            setLoading(false)
+            
             setUser(currentUser)
             if(currentUser){
                 // create token and store it 
@@ -49,6 +49,7 @@ const AuthProvider = ({children}) => {
                 localStorage.removeItem('access-token')
             }
             console.log(currentUser)
+            setLoading(false)
         })
         return ()=> unSubscribe()
     },[axiosPublic])

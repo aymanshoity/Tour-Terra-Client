@@ -25,7 +25,7 @@ const AboutUs = () => {
             </div>
             <SharedHeading heading1={'Glimpse of the beauty of'} heading2={'Bangladesh'}></SharedHeading>
             <Example></Example>
-            <Footer></Footer>
+            
         </div>
     );
 };

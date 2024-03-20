@@ -27,10 +27,11 @@ const Navbar = () => {
     }
     const links = <>
         <NavLink to='/' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Home</NavLink>
-        <NavLink to='/community' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Community</NavLink>
-        <NavLink to='/blogs' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Blogs</NavLink>
         <NavLink to='/aboutUs' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>About Us</NavLink>
-        <NavLink to='/contact' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Contact Us</NavLink>
+        {/* <NavLink to='/community' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Community</NavLink> */}
+        <NavLink to='/blogs' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Blogs</NavLink>
+        
+        <NavLink to='/contactUs' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Contact Us</NavLink>
         <NavLink to='/register' className={({ isActive }) => (isActive ? 'text-lg mr-4 text-[#90dddcff]' : 'text-lg mr-4 text-white')}>Register</NavLink>
 
     </>
@@ -64,7 +65,7 @@ const Navbar = () => {
 }/>
                             </div>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm p-2 bg-black text-lg dropdown-content mt-3 z-[1] p-2 shadow text-white rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm p-2 bg-black text-md dropdown-content mt-3 z-[1]  shadow text-white rounded-box w-52">
                             <li>{user?.displayName}</li>
                             <li>{user?.email}</li>
                             <Link to='/dashboard'><li>Dashboard</li></Link>

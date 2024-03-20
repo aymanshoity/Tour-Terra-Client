@@ -16,7 +16,7 @@ const Home = () => {
             <MeetTourGuides></MeetTourGuides>
             <TourType></TourType>
             <TouristStory ></TouristStory>
-            <Footer></Footer>
+            
         </div>
     );
 };

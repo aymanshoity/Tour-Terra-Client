@@ -19,6 +19,12 @@ import AddPackage from '../Components/Dashboard/Admin/AddPackage';
 import ManageUsers from '../Components/Dashboard/Admin/ManageUsers';
 import TourGuideProfile from '../Components/Dashboard/TourGuide/TourGuideProfile';
 import AboutUs from '../Components/Navbar/NavbarSections/AboutUs';
+import ContactUs from '../Components/Navbar/NavbarSections/ContactUs';
+// import Community from '../Components/Navbar/NavbarSections/Community';
+import Blogs from "../Components/Navbar/NavbarSections/Blogs"
+import AddReview from '../Components/Dashboard/Tourist/AddReview';
+import AddBlogs from '../Components/Dashboard/Admin/AddBlogs';
+import SingleBlog from '../Components/Navbar/NavbarSections/SingleBlog';
 const router = createBrowserRouter([
     {path:'/',
     element:<Root></Root>,
@@ -26,6 +32,10 @@ const router = createBrowserRouter([
     children:[
         {path:'/',element:<Home></Home>},
         {path:'/aboutUs',element:<AboutUs></AboutUs>},
+        {path:'/contactUs',element:<ContactUs></ContactUs>},
+        {path:'/blogs',element:<Blogs></Blogs>},
+        {path:'/blogs/:id',element:<SingleBlog></SingleBlog>},
+        // {path:'/community',element:<Community></Community>},
         {path:'/login',element:<Login></Login>},
         {path:'/register',element:<Register></Register>},
         {path:'/allTourGuides',element:<AllTourGuides></AllTourGuides>},
@@ -37,6 +47,7 @@ const router = createBrowserRouter([
             {path:'/dashboard/touristProfile',element:<PrivateRoute><TouristProfile></TouristProfile></PrivateRoute>},
             {path:'/dashboard/myBookings',element:<PrivateRoute><MyBookings></MyBookings></PrivateRoute>},
             {path:'/dashboard/myWishlist',element:<PrivateRoute><MyWishlist></MyWishlist></PrivateRoute>},
+            {path:'/dashboard/addReview',element:<PrivateRoute><AddReview></AddReview></PrivateRoute>},
             // tour guide routes
             {path:'/dashboard/tourGuideProfile',element:<PrivateRoute><TourGuideProfile></TourGuideProfile></PrivateRoute>},
             {path:'/dashboard/myAssignedTour',element:<PrivateRoute><MyAssignedTour></MyAssignedTour></PrivateRoute>},
@@ -44,6 +55,7 @@ const router = createBrowserRouter([
             {path:'/dashboard/adminProfile',element:<PrivateRoute><AdminProfile></AdminProfile></PrivateRoute>},
             {path:'/dashboard/addPackage',element:<PrivateRoute><AddPackage></AddPackage></PrivateRoute>},
             {path:'/dashboard/manageUser',element:<PrivateRoute><ManageUsers></ManageUsers></PrivateRoute>},
+            {path:'/dashboard/addBlogs',element:<PrivateRoute><AddBlogs></AddBlogs></PrivateRoute>},
         ]},
     ]
 

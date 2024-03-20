@@ -3,7 +3,7 @@ import { FaUserShield } from "react-icons/fa6";
 import { FaUserTag } from "react-icons/fa6";
 import Swal from 'sweetalert2';
 import UseAxiosSecure from '../../../Hooks/UseAxiosSecure';
-const Users = ({ tourist, refetch }) => {
+const UsersCard = ({ tourist, refetch }) => {
     const [isDisabled, setIsDisabled] = useState(false)
     const axiosSecure = UseAxiosSecure()
     useEffect(() => {
@@ -32,7 +32,7 @@ const Users = ({ tourist, refetch }) => {
                             setIsDisabled(true)
                             refetch()
                         }
-                        else{
+                        else {
                             Swal.fire(`${tourist.name} is already a tour guide`)
                         }
                     })
@@ -71,14 +71,33 @@ const Users = ({ tourist, refetch }) => {
         });
     }
     return (
-        <tr className="hover:bg-gray-50 transition duration-300">
-            <td className="py-4 px-6 border-b">{tourist?.name}</td>
-            <td className="py-4 px-6 border-b">{tourist?.email}</td>
-            <td className="py-4 px-6 border-b">{tourist?.role}</td>
-            <td className="py-4 px-6 border-b text-end"><button disabled={isDisabled} onClick={() => handleMakeTourGuide(tourist._id)} className="btn bg-black text-xl text-white hover:bg-[#90dddcff]"><FaUserTag /></button></td>
-            <td className="py-4 px-6 border-b text-end"><button disabled={isDisabled} onClick={() => handleMakeAdmin(tourist._id)} className="btn bg-black text-xl text-white hover:bg-[#90dddcff]"><FaUserShield /></button></td>
-        </tr>
+        <div className="w-[300px] mx-auto my-20 p-6 md:p-8 rounded-2xl shadow-lg shadow-[#90dddcff] bg-white">
+            <div className="space-y-6 ">
+
+                <div className="flex flex-row justify-between"><span className="font-bold">Name</span><span className="text-right">{tourist?.name}</span></div>
+                <div className="flex flex-row justify-between"><span className="font-bold">Email</span><span>{tourist?.email}</span></div>
+                <div className="flex flex-row justify-between"><span className="font-bold">Role</span><span>{tourist?.role}</span></div>
+
+                <div className="flex flex-row justify-between">
+
+                    <span className="font-bold">Action</span>
+                    <span><button disabled={isDisabled} onClick={() => handleMakeTourGuide(tourist._id)} className="btn bg-black text-xl text-white hover:bg-[#90dddcff]"><FaUserTag /></button></span>
+
+                </div>
+                <div className="flex flex-row justify-between">
+
+                    <span className="font-bold">Action</span>
+                    <span><button disabled={isDisabled} onClick={() => handleMakeAdmin(tourist._id)} className="btn bg-black text-xl text-white hover:bg-[#90dddcff]"><FaUserShield /></button></span>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
     );
 };
 
-export default Users;
+export default UsersCard;
