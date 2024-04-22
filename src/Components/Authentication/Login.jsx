@@ -61,7 +61,7 @@ const Login = () => {
 
             <div className="flex-1 lg:w-1/2 lg:h-screen  lg:my-0 my-5">
                 <SharedHeading heading1={'Glad to get to back in '} heading2={'Tour Terra'}></SharedHeading>
-                <div className=" mx-auto lg:w-full md:w-[500px] w-[280px]  shadow-lg shadow-cyan-500/50 bg-white">
+                <div className=" mx-auto lg:w-full md:w-[500px] w-[280px] bg-white">
                     <form onSubmit={handleLogin} className="px-12 py-2">
                         <h1 className="backdrop-blur-sm text-4xl pb-4">Login</h1>
                         <div className="space-y-2">
@@ -82,7 +82,8 @@ const Login = () => {
                         </div>
                         <label htmlFor="email" className="block mt-6">New to this Website? Go to <Link to='/register'><span className="text-red-600">Register Page</span></Link></label>
                         {/* button type will be submit for handling form submission*/}
-                        <button type="submit" className="my-5 w-full btn bg-black text-white hover:bg-[#90dddcff]">Login</button>
+                        <button type="submit" className="my-5  btn bg-black text-white hover:bg-[#90dddcff]">Login</button>
+                        <Link to='/'><button className="my-3 btn bg-black text-white hover:bg-[#90dddcff]">Return Home</button></Link>
                     </form>
                     <div className="divider">Or Sign In with</div>
                     <div className="py-2 flex flex-col items-center">

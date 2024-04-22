@@ -68,7 +68,7 @@ const Banner = () => {
             className="mySwiper max-h-screen"
         >
             <SwiperSlide >
-                <div className="hero  min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/6Xxr6gZ/pexels-bluesea-tea-16264511.jpg)' }}>
+                <div className="hero  min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/Lhb2PhR/438664200-292932033901424-8292549178097383639-n.jpg)' }}>
                     <div style={overlay1}></div>
                     <div style={overlay2}></div>
                     <div style={overlay3}></div>
@@ -84,7 +84,7 @@ const Banner = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide >
-                <div className="hero  min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/SRgyP5x/pexels-johannes-plenio-1105391.jpg)' }}>
+                <div className="hero  min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/fvQ0spp/hironpoint.jpg)' }}>
                     <div style={overlay1}></div>
                     <div style={overlay2}></div>
                     <div style={overlay3}></div>

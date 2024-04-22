@@ -58,7 +58,7 @@ const AddPackage = () => {
     return (
         <div>
             <SharedHeading heading1={'Add a new'} heading2={'Tour Package'}></SharedHeading>
-            <div className="  shadow-2xl shadow-[#90dddcff] bg-base-100">
+            <div className="  bg-white">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div >
                         <label className="label">

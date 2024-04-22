@@ -8,7 +8,7 @@ const provider=new GoogleAuthProvider()
 export const AuthContext=createContext(null)
 const AuthProvider = ({children}) => {
     const axiosPublic=UseAxiosPublic()
-    const [loading ,setLoading]=useState(false)
+    const [loading ,setLoading]=useState(true)
     const [user,setUser]=useState([])
 
     const createUser=(email,password)=>{
@@ -32,7 +32,7 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unSubscribe=onAuthStateChanged(auth,currentUser=>{
-            
+            console.log(currentUser)
             setUser(currentUser)
             if(currentUser){
                 // create token and store it 
@@ -41,15 +41,17 @@ const AuthProvider = ({children}) => {
                 .then(res=>{
                     if(res.data.token){
                         localStorage.setItem('access-token',res.data.token)
+                        setLoading(false)
                     }
                 })
             }
             else{
                 // token will be removed from local storage
                 localStorage.removeItem('access-token')
+                setLoading(false)
             }
-            console.log(currentUser)
-            setLoading(false)
+            
+            
         })
         return ()=> unSubscribe()
     },[axiosPublic])

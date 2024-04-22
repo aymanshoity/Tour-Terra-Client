@@ -110,7 +110,7 @@ const Register = () => {
 
             <div className="flex-1 lg:w-1/2 ">
 
-                <div className=" mx-auto lg:w-full md:w-[500px] w-[280px]  shadow-lg shadow-cyan-500/50 bg-white lg:h-screen lg:my-0 my-5">
+                <div className=" mx-auto lg:w-full md:w-[500px] w-[280px]  bg-white lg:h-screen lg:my-0 my-5">
                     <SharedHeading heading1={'Welcome to'} heading2={'Tour Terra'}></SharedHeading>
                     <form onSubmit={handleSubmit(onSubmit)} className="px-12 py-4">
                         <h1 className="backdrop-blur-sm text-4xl pb-4">Register</h1>

@@ -70,7 +70,7 @@ const Navbar = () => {
                             <li>{user?.email}</li>
                             <Link to='/dashboard'><li>Dashboard</li></Link>
                             <li onClick={handleLogout}>Logout</li>
-                            <li>Offer Announcements</li>
+                            {/* <li>Offer Announcements</li> */}
                         </ul>
                     </div>
                 }

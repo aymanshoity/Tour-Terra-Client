@@ -80,13 +80,13 @@ const UsersCard = ({ tourist, refetch }) => {
 
                 <div className="flex flex-row justify-between">
 
-                    <span className="font-bold">Action</span>
+                    <span className="font-bold">Make Tour Guide</span>
                     <span><button disabled={isDisabled} onClick={() => handleMakeTourGuide(tourist._id)} className="btn bg-black text-xl text-white hover:bg-[#90dddcff]"><FaUserTag /></button></span>
 
                 </div>
                 <div className="flex flex-row justify-between">
 
-                    <span className="font-bold">Action</span>
+                    <span className="font-bold">Make Admin</span>
                     <span><button disabled={isDisabled} onClick={() => handleMakeAdmin(tourist._id)} className="btn bg-black text-xl text-white hover:bg-[#90dddcff]"><FaUserShield /></button></span>
 
                 </div>
