@@ -13,6 +13,14 @@
 
 Tour Terra serves as a robust system for managing tourist guides, designed to cater to the needs of travelers exploring Bangladesh. It functions as an online hub offering extensive insights and resources for individuals seeking guidance on prominent destinations within the country. Users gain access to in-depth information on captivating tourist spots and a plethora of additional amenities, ensuring a seamless and enriching travel experience.
 
+
+𝐀𝐝𝐦𝐢𝐧 𝐄𝐦𝐚𝐢𝐥:ifti123@gmail.com
+𝐀𝐝𝐦𝐢𝐧 𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝: 123456@Aa
+
+
+𝐓𝐨𝐮𝐫 𝐆𝐮𝐢𝐝𝐞 𝐄𝐦𝐚𝐢𝐥:john.doe@gmail.com
+𝐓𝐨𝐮𝐫 𝐆𝐮𝐢𝐝𝐞 𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝: 123456@Aa
+
 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬:
 
 1. Application of Firebase Authentication System. User can register and login using Email-Password or Google .
